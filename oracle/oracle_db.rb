@@ -1,16 +1,16 @@
 # coding: UTF-8
 require 'oci8'
 
-user='JPSPFA11'
-pass='JPSPFA11#'
-tns='JDC11'
-sql="select * from tsy_inf"
+user='<DBユーザ>'
+pass='<パスワード>'
+tns='<TNS名>'
+sql="select * from table"
 
 begin
   conn = OCI8.new(user, pass, tns)
   cursor = conn.exec(sql)
   puts cursor.get_col_names.join(',')
-  #puts cursor.column_metadata
+  puts cursor.column_metadata
   while row = cursor.fetch
     puts row.join(',')
   end
