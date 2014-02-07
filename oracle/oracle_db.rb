@@ -1,10 +1,10 @@
 # coding: UTF-8
 require 'oci8'
 
-user='<DBユーザ>'
-pass='<パスワード>'
-tns='<TNS名>'
-sql="select * from table"
+user='hr'
+pass='hr'
+tns='orcl'
+sql="select * from EMPLOYEES where rownum <= 10"
 
 begin
   conn = OCI8.new(user, pass, tns)
