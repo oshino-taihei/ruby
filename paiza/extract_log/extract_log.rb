@@ -13,7 +13,6 @@ end
 
 # 指定したオクテットを取得
 def get_octet(target, index)
-	target =~ /^([^\.]*)\.([^\.]*)\.([^\.]*)\.([^\.]*)/
 	matches =  /^([^\.]*)\.([^\.]*)\.([^\.]*)\.([^\.]*)/.match(target)
 	return matches[index]
 end
@@ -31,6 +30,7 @@ def get_range(target, index)
 	return ret
 end
 
+# 第3, 4オクテットが[0-100]の形式で記述されているか確認
 r3rd_range = get_range(target, 3)
 r4th_range = get_range(target, 4)
 need_check_3rd = r3rd_range.size == 2
