@@ -7,7 +7,6 @@ game = gets.chomp.gsub("G", "0").split(" ").map(&:to_i)
 total_score = 0
 frame_score = 0
 frame = 0
-frame_index = 0
 0.upto(ball_num - 1) { |i|
 	frame += 1
 	frame_score += game[i]
@@ -32,7 +31,6 @@ frame_index = 0
 		total_score += frame_score
 		frame_score = 0
 		frame = 0
-		frame_index += 1
 	end
 
 }
