@@ -151,7 +151,8 @@ end
 
 ######
 # **suumo URL**
-url = "http://suumo.jp/jj/bukken/ichiran/JJ011FC001/?ar=030&bs=010&ta=13&kt=9999999&kb=1&km=1&mt=9999999&mb=0&tj=0&po=0&pj=1&initFlg=1&bknlistmodeflg=1&pc=100"
+#url = "http://suumo.jp/jj/bukken/ichiran/JJ011FC001/?ar=030&bs=010&ta=13&kt=9999999&kb=1&km=1&mt=9999999&mb=0&tj=0&po=0&pj=1&initFlg=1&bknlistmodeflg=1&pc=100"
+url = "http://suumo.jp/jj/bukken/ichiran/JJ012FC001/?ar=030&bs=011&cn=9999999&ekTjCd=&ekTjNm=&et=10&kb=3500&kt=5000&mb=60&md=2&md=3&mt=80&sc=13101&sc=13102&sc=13103&sc=13104&sc=13105&sc=13113&ta=13&tj=0&po=0&pj=1&pc=100"
 ######
 
 # tsvファイル出力
@@ -165,9 +166,9 @@ File.open(output_file, 'w') { |f|
 		###################################################
 		# **物件一覧取得処理**
 		# 中古のリストのときはこっち
-		#prop_list = prop_page.make_simple_property_list
+		prop_list = prop_page.make_simple_property_list
 		# 新築のリストのときはこっち
-		prop_list = prop_page.make_property_list
+		#prop_list = prop_page.make_property_list
 		###################################################
 		
 		prop_list.each { |prop|
