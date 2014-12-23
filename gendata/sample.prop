@@ -1,0 +1,12 @@
+{
+	:table => 'SAMPLE',
+	:rows => 10,
+	:columns => [
+		{ :name => 'ID', :type => :string, :format => :seq, :digit => 5},
+		{ :name => 'NAME', :type => :string, :format => :random, :digit => 8},
+		{ :name => 'SEX', :type => :string, :format => :const, :values => ['M', 'F']},
+		{ :name => 'DATE', :type => :date, :format => '%Y%m%d', :from => '2014/1/1', :to => '2024/12/31'},
+		{ :name => 'EMAIL', :type => :string, :format => :email},
+		{ :name => 'URL', :type => :string, :format => :url},
+	]
+}
